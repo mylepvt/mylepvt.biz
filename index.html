@@ -9,8 +9,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafb;
-      color: #1e293b;
+      background: #0f172a;
+      color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -20,7 +20,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: #0f172a;
+      background: rgba(15, 23, 42, 0.9);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -41,48 +41,47 @@
     }
     nav a:hover { color: #38bdf8; }
 
+    /* Hero Section */
     .hero {
+      height: 90vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      height: 90vh;
-      padding: 2rem;
-      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      background: url("https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      position: relative;
       color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.6);
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      animation: fadeInDown 1s ease-in-out;
+      font-size: 3rem;
+      z-index: 1;
+      animation: fadeInDown 1.2s ease-in-out;
     }
 
-    .typewriter {
-      font-size: 1.5rem;
-      color: #fff;
-      border-right: 2px solid #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 4s steps(40, end) infinite alternate, blink 0.8s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      color: #38bdf8;
+      z-index: 1;
     }
 
     .about {
       padding: 4rem 2rem;
       text-align: center;
-      background: #fff;
+      background: #1e293b;
     }
-    .about h2 { font-size: 2rem; margin-bottom: 1rem; color: #0f172a; }
-    .about p { max-width: 700px; margin: 0 auto 2rem; color: #334155; }
+    .about h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .about p { max-width: 700px; margin: 0 auto 2rem; }
 
     .services {
       display: grid;
@@ -91,10 +90,9 @@
       margin-top: 2rem;
     }
     .service-card {
-      background: #f1f5f9;
+      background: #0f172a;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s ease, transform 0.8s ease;
@@ -106,39 +104,35 @@
     .service-card i {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #2563eb;
+      color: #38bdf8;
     }
-    .service-card h3 { margin-bottom: 0.5rem; color: #0f172a; }
-    .service-card p { color: #475569; }
+    .service-card h3 { margin-bottom: 0.5rem; }
 
     .contact {
       padding: 3rem 2rem;
       text-align: center;
-      background: #e2e8f0;
+      background: #0f172a;
     }
-    .contact h2 { font-size: 2rem; margin-bottom: 1rem; color: #0f172a; }
+    .contact h2 { font-size: 2rem; margin-bottom: 1rem; }
     .contact a {
       display: inline-block;
       margin: 0.5rem;
-      color: #0f172a;
+      color: #fff;
       font-size: 1.2rem;
       text-decoration: none;
       transition: transform 0.3s ease;
     }
-    .contact a:hover { transform: scale(1.1); color: #2563eb; }
+    .contact a:hover { transform: scale(1.1); color: #38bdf8; }
 
     .social-icons i {
       font-size: 2rem;
       margin: 0 0.7rem;
-      color: #0f172a;
-      transition: color 0.3s ease;
     }
-    .social-icons i:hover { color: #2563eb; }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background: #0f172a;
+      background: #1e293b;
       font-size: 0.9rem;
       color: #94a3b8;
     }
@@ -154,13 +148,13 @@
       header { flex-direction: column; }
       nav { margin-top: 1rem; }
       .hero h1 { font-size: 2rem; }
-      .typewriter { font-size: 1.2rem; }
+      .hero p { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="/"><img src="https://drive.google.com/uc?id=1-ETjDNqkCk9fFKjLflDvOHTpH-ACtjYr" alt="Myle Logo"></a>
+    <a href="/"><img src="https://drive.google.com/uc?export=view&id=1-ETjDNqkCk9fFKjLflDvOHTpH-ACtjYr" alt="Myle Logo"></a>
     <nav>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -169,7 +163,7 @@
 
   <section class="hero">
     <h1>Welcome to Myle Community</h1>
-    <div class="typewriter">Crafting Ideas, Building Connections</div>
+    <p>Founded by Karan Veer Singh — Empowering Youth with Digital Growth</p>
   </section>
 
   <section id="about" class="about">
@@ -230,4 +224,5 @@
   </script>
 </body>
 </html>
+
 
