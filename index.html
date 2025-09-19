@@ -1,184 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karan Veer Singh | Myle Pvt</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myle Pvt Advertising Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
+      background: #fdfdfd;
       color: #333;
-      background-color: #f9f9f9;
-      overflow-x: hidden;
     }
     header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
       background: #111;
-      color: #fff;
-      padding: 20px 40px;
-      text-align: center;
-      animation: slideDown 1s ease-out;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    header h1 {font-size: 2.2rem; letter-spacing: 1px;}
-    header p {font-size: 1rem; margin-top: 5px; color: #ddd;}
-    nav {margin-top: 15px;}
-    nav a {
-      color: #fff;
+    header img.logo {
+      height: 60px;
+      width: auto;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header nav a {
+      margin-left: 20px;
+      color: white;
       text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      transition: color 0.3s;
+      font-weight: 500;
     }
-    nav a:hover {color: #ff6600;}
+    header nav a:hover {
+      color: #ff4b2b;
+    }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x600/?marketing,agency') center/cover no-repeat;
-      color: #fff;
       text-align: center;
       padding: 100px 20px;
-      animation: fadeIn 2s ease-in;
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      color: white;
     }
-    .hero h2 {font-size: 2.5rem; margin-bottom: 15px;}
-    .hero p {font-size: 1.2rem; max-width: 600px; margin: auto;}
-    .section {
-      padding: 60px 20px;
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 25px;
+      background: white;
+      color: #ff416c;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #ffefef;
+    }
+    section {
+      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
       text-align: center;
     }
-    .section h2 {
+    section h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #111;
-      position: relative;
-    }
-    .section h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #ff6600;
-      margin: 10px auto 0;
-      border-radius: 2px;
     }
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+      gap: 30px;
+      margin-top: 40px;
     }
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeUp 1s ease forwards;
-      opacity: 0;
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    .service:hover {
+      transform: translateY(-8px);
     }
-    .card h3 {margin: 15px 0; color: #222;}
-    .card i {
-      font-size: 2rem;
-      color: #ff6600;
+    .service i {
+      font-size: 2.5rem;
+      color: #ff416c;
+      margin-bottom: 15px;
     }
-    .contact {
-      background: #111;
-      color: #fff;
-      padding: 50px 20px;
-      animation: fadeIn 1.5s ease;
-    }
-    .contact p {margin: 10px 0;}
-    .email {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #ff6600;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .email:hover {background: #e65c00;}
     footer {
+      background: #111;
+      color: white;
       text-align: center;
-      padding: 20px;
-      background: #222;
-      color: #ccc;
-      font-size: 0.9rem;
+      padding: 30px 20px;
     }
-
-    /* Animations */
-    @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
-    @keyframes slideDown {from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;}}
-    @keyframes fadeUp {from {transform: translateY(40px); opacity: 0;} to {transform: translateY(0); opacity: 1;}}
+    footer a {
+      color: #ff416c;
+      text-decoration: none;
+    }
+    footer .social i {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+    footer .social i:hover {
+      color: #ffb3c6;
+    }
   </style>
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
-    <h1>Karan Veer Singh | Myle Pvt</h1>
-    <p>Smart Marketing • Instagram Ads • Lead Generation</p>
+    <img src="https://drive.google.com/uc?export=view&id=1-ETjDNqkCk9fFKjLflDvOHTpH-ACtjYr" alt="Myle Pvt Logo" class="logo">
+    <h1>Myle Pvt Advertising Agency</h1>
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h2>Grow Your Business with Digital Ads</h2>
-    <p>We specialize in Instagram advertising, lead generation, and student-focused campaigns. Our goal: quality leads, not just clicks.</p>
+    <h2>Grow Your Brand with Us</h2>
+    <p>We specialize in Instagram Ads, Lead Generation & Creative Digital Marketing Campaigns.</p>
+    <a href="mailto:contact@mylepvt.biz" class="btn">Email Us</a>
   </section>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
+  <!-- Services Section -->
+  <section id="services">
+    <h3>Our Services</h3>
     <div class="services">
-      <div class="card" style="animation-delay:0.2s">
+      <div class="service">
         <i class="fas fa-bullhorn"></i>
-        <h3>Instagram Ads</h3>
-        <p>Engaging reels, stories, and explore ads tailored for your audience.</p>
+        <h4>Advertising Campaigns</h4>
+        <p>Run targeted ads on Instagram Reels, Stories & Explore for maximum engagement.</p>
       </div>
-      <div class="card" style="animation-delay:0.4s">
-        <i class="fas fa-users"></i>
-        <h3>Lead Generation</h3>
-        <p>Focused campaigns to capture genuine student and fresher leads.</p>
+      <div class="service">
+        <i class="fas fa-chart-line"></i>
+        <h4>Lead Generation</h4>
+        <p>High-quality student & fresher leads optimized for North India, with female-oriented focus.</p>
       </div>
-      <div class="card" style="animation-delay:0.6s">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Brand Awareness</h3>
-        <p>Boost your brand’s presence with creative campaigns that connect.</p>
+      <div class="service">
+        <i class="fas fa-pen-nib"></i>
+        <h4>Creative Ad Copies</h4>
+        <p>Safe, detailed, and human-like ad copywriting tailored for your campaigns.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to work with you. For business inquiries, reach out at:</p>
-    <p><strong>Email:</strong> contact@mylepvt.biz</p>
-    <a href="mailto:contact@mylepvt.biz" class="email">Email Us</a>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: <a href="mailto:contact@mylepvt.biz">contact@mylepvt.biz</a></p>
+    <div class="social">
+      <a href="https://www.instagram.com/karanveersingh_24/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Karan Veer Singh • Myle Pvt</p>
+    <p>&copy; 2025 Myle Pvt Advertising Agency | Founded by Karan Veer Singh</p>
   </footer>
-
-  <script>
-    // Animate service cards one by one
-    const cards = document.querySelectorAll('.card');
-    window.addEventListener('scroll', () => {
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          card.style.opacity = "1";
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
